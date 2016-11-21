@@ -1,0 +1,269 @@
+
+out/udisk.elf:     file format elf32-sparc
+
+SYMBOL TABLE:
+06000000 l    d  .text	00000000 .text
+0d000000 l    d  .bss	00000000 .bss
+00000000 l    d  .comment	00000000 .comment
+06000340 l       .text	00000000 trap_table
+06000024 l       .text	00000000 ENTER_LOOP
+06000028 l       .text	00000000 ENTER_LOOP_C
+06000044 l       .text	00000000 DETERMINE_END
+06000084 l       .text	00000000 TRAP_ENTRY
+0600008c l       .text	00000000 _hardreset_svt
+060000ec l       .text	00000000 _halt
+060000f8 l       .text	00000000 _window_overflow_svt
+06000154 l       .text	00000000 _window_underflow_svt
+060001b0 l       .text	00000000 _leonbare_irq_entry_svt
+0600023c l       .text	00000000 CURRENT_WINDOW_IS_VALID
+06000204 l       .text	00000000 CURRENT_WINDOW_IS_INVALID
+060002f4 l       .text	00000000 WINDOW_IS_NOT_UNDERFLOW
+06000284 l       .text	00000000 WINDOW_IS_UNDERFLOW
+06000328 l       .text	00000000 IRQ_RETURN
+0600041c l       .text	00000000 mul_shortway
+06000490 l       .text	00000000 ready_to_divide
+06000700 l       .text	00000000 got_result
+0600055c l       .text	00000000 not_really_big
+060004fc l       .text	00000000 not_too_big
+06000510 l       .text	00000000 do_single_div
+060006ec l       .text	00000000 end_regular_divide
+0600054c l       .text	00000000 end_single_divloop
+0600052c l       .text	00000000 single_divloop
+06000578 l       .text	00000000 divloop
+06000638 l       .text	00000000 L1.16
+060005e4 l       .text	00000000 L2.17
+060005c0 l       .text	00000000 L3.19
+060005b4 l       .text	00000000 L4.23
+060005d8 l       .text	00000000 L4.21
+06000614 l       .text	00000000 L3.17
+06000608 l       .text	00000000 L4.19
+0600062c l       .text	00000000 L4.17
+06000698 l       .text	00000000 L2.15
+06000674 l       .text	00000000 L3.15
+06000668 l       .text	00000000 L4.15
+0600068c l       .text	00000000 L4.13
+060006c8 l       .text	00000000 L3.13
+060006bc l       .text	00000000 L4.11
+060006e0 l       .text	00000000 L4.9
+06000740 l       .text	00000000 divide
+060009b0 l       .text	00000000 got_result
+0600080c l       .text	00000000 not_really_big
+060007ac l       .text	00000000 not_too_big
+060007c0 l       .text	00000000 do_single_div
+0600099c l       .text	00000000 end_regular_divide
+060007fc l       .text	00000000 end_single_divloop
+060007dc l       .text	00000000 single_divloop
+06000828 l       .text	00000000 divloop
+060008e8 l       .text	00000000 L1.16
+06000894 l       .text	00000000 L2.17
+06000870 l       .text	00000000 L3.19
+06000864 l       .text	00000000 L4.23
+06000888 l       .text	00000000 L4.21
+060008c4 l       .text	00000000 L3.17
+060008b8 l       .text	00000000 L4.19
+060008dc l       .text	00000000 L4.17
+06000948 l       .text	00000000 L2.15
+06000924 l       .text	00000000 L3.15
+06000918 l       .text	00000000 L4.15
+0600093c l       .text	00000000 L4.13
+06000978 l       .text	00000000 L3.13
+0600096c l       .text	00000000 L4.11
+06000990 l       .text	00000000 L4.9
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 eflash.c
+00000000 l    df *ABS*	00000000 vsprintf.c
+00000000 l    df *ABS*	00000000 jtag_con.c
+00000000 l    df *ABS*	00000000 mem.c
+00000000 l    df *ABS*	00000000 ahb_usbnfc.c
+060073a0 l     O .text	00000006 tCS
+06007380 l     O .text	00000006 tWB
+06007370 l     O .text	00000006 tWHR
+06007390 l     O .text	00000006 tRR
+06007388 l     O .text	00000006 tADL
+06007378 l     O .text	00000006 tRHW
+06007398 l     O .text	00000006 tCCS
+06007340 l     O .text	00000006 tCLS
+06007348 l     O .text	00000006 tCLH
+06007350 l     O .text	00000006 tALS
+06007358 l     O .text	00000006 tALH
+06007360 l     O .text	00000006 tRP
+06007368 l     O .text	00000006 tWP
+00000000 l    df *ABS*	00000000 nflash.c
+00000000 l    df *ABS*	00000000 usb.c
+0d000048 g     O .bss	00000048 bk
+0d000000 g     O .bss	00000004 onfi_speed
+0600205c g     F .text	00000148 ONFI_ChangeRowAddress
+06005f3c g     F .text	000000d4 usb_cep_set_config
+06004b14 g     F .text	00000018 Nfc_getFlashInfo
+060047cc g     F .text	00000170 Disk_Read
+060073c0 g     O .text	00000020 usb_data_desc_config
+06002e5c g     F .text	0000018c ONFI_ProgramPageMultiLun_end
+06004f74 g     F .text	00000090 nandFlashWrite
+06003f7c g     F .text	0000014c setup_NFC_FTL
+0d000090 g     O .bss	00000004 epInMask
+06002e54 g     F .text	00000008 ONFI_EraseBlockMultiLun
+06000e90 g     F .text	00000064 memcpy32htonl
+06000d20 g     F .text	00000038 memcpy32_r
+0d000004 g     O .bss	00000004 NFC_FMICFFRD
+06003900 g     F .text	000000c8 NFC_Set_Mode
+060011b8 g     F .text	00000030 NFC_FMIOFF_read
+060060b8 g     F .text	00000068 usb_cep_set_interface
+06002a64 g     F .text	000000c8 ONFI_ProgramPageCache_end
+0d000094 g     O .bss	00000004 usb_irq_flag
+0600166c g     F .text	000001d0 ONFI_SetFeatures
+06004b2c g     F .text	00000074 flashInfoStringInit
+06000cc4 g     F .text	0000002c memcpy8
+060073e0 g     O .text	00000004 usb_data_desc_string0
+06006010 g     F .text	000000a8 usb_cep_get_interface
+060067b0 g     F .text	000002e8 usb_scsi
+06005968 g     F .text	00000198 usb_cep_get_descriptor
+06004d78 g     F .text	00000154 NFC_Flash_Init
+06003f28 g     F .text	00000054 setup_NFC_AUX
+06006208 g     F .text	0000021c usb_bk_out_data
+06001050 g     F .text	000000a8 memmem
+06004728 g     F .text	00000034 Nfc_getFlashInfo_16
+06004a7c g     F .text	00000064 addrMapMultiLun
+060026d8 g     F .text	0000017c ONFI_ReadPageMultiPlane
+06001f8c g     F .text	000000d0 ONFI_ChangeWriteColumn
+06004ecc g     F .text	00000018 NFC_Reset
+06003728 g     F .text	000000d4 ONFI_dma_write
+06004330 g     F .text	000000f4 NFC_ProgramFtl_T
+060010f8 g     F .text	0000002c memcpy
+06002608 g     F .text	000000d0 ONFI_ReadCacheLast
+06000e04 g     F .text	00000058 memcmp8
+06006128 g     F .text	00000024 usb_cep_get_max_lun
+06007480 g     O .text	00000004 usb_data_udisk_mode_sense6
+06001020 g     F .text	00000030 write_uint32
+0d000098 g     O .bss	00000020 cep
+06007490 g     O .text	00000014 usb_data_udisk_request_sense
+06000464 g       .text	00000000 .udiv
+06002458 g     F .text	000001b0 ONFI_ReadPageCacheRandom
+060074c0 g       .text	00000000 text_end
+060021a4 g     F .text	00000034 ONFI_ReadMode
+06007014 g     F .text	0000010c usb_init
+0600553c g     F .text	000001f0 usb_cep_sent
+06004af4 g     F .text	00000020 NFC_ReadParameterPage
+060039c8 g     F .text	000001e0 ONFI_set_speed
+06006d1c g     F .text	000000f8 usb_dev_init
+00000000 g       *ABS*	00000000 __DYNAMIC
+060046b8 g     F .text	00000024 NFC_IRQ_DISABLE
+0600046c g       .text	00000000 .div
+06001188 g     F .text	00000030 NFC_FMICFF_read
+0d0000b8 g     O .bss	00000004 pUsbCptReg
+06000da8 g     F .text	0000005c memcmp32
+060040c8 g     F .text	00000108 get_NFC_FTL
+06003258 g     F .text	00000008 ONFI_CopybackProgramInterleaved
+06006c4c g     F .text	00000068 usb_bk_reset_in
+06007448 g     O .text	0000000a usb_data_desc_qualifier
+06000c94 g     F .text	00000030 memcpy32
+060057e8 g     F .text	0000005c usb_cep_clear_feature
+060074b0 g     O .text	0000000c usb_data_udisk_read_formate_capacity
+060011e8 g     F .text	0000011c ONFI_Reset
+06006178 g     F .text	00000090 usb_bk_error
+06002fe8 g     F .text	00000270 ONFI_CopybackRead
+06000d80 g     F .text	00000028 memset32
+0d0000bc g     O .bss	00000004 epOutMask
+0d000008 g     O .bss	00000004 NFC_FMIOFFRD
+0600148c g     F .text	000000f0 ONFI_ReadParameterPage
+060013ec g     F .text	000000a0 ONFI_ReadID
+0d0000c0 g     O .bss	00000004 usb_irq_stat
+0d0000c8 g     O .bss	00000880 usb_cmd_buf
+06000d58 g     F .text	00000028 memset8
+0600493c g     F .text	00000140 Disk_Program
+06007428 g     O .text	00000020 usb_data_desc_string3
+06004690 g     F .text	00000028 NFC_IRQ_ENABLE
+06001928 g     F .text	000001b8 ONFI_ReadStatus
+06002b2c g     F .text	000000c8 ONFI_ProgramPageMultiPlane_end
+0d000948 g     O .bss	00000001 is_usb_enb
+0d000000 g       *ABS*	00000000 RAM_START
+06001df8 g     F .text	00000194 ONFI_SelectCacheRegister
+06002bf4 g     F .text	00000130 ONFI_EraseBlock
+06006e14 g     F .text	00000200 usb_dev_dsr
+06004ba0 g     F .text	000001d8 NFC_handler
+0d00000c g     O .bss	00000004 nfcIrqStat
+060074a8 g     O .text	00000008 usb_data_udisk_read_capacity
+0d00094c g     O .bss	00000004 pUsbOtgReg
+06004ae0 g     F .text	00000014 NFC_Eraser_Cpu
+06000f60 g     F .text	00000030 read_uint32
+06005b00 g     F .text	0000038c usb_cep_setup
+06001164 g     F .text	00000024 setMem
+0d000010 g     O .bss	00000004 nfcReg
+06002854 g     F .text	00000148 ONFI_ProgramPage
+0d000960 g       .bss	00000000 bss_end
+06006a98 g     F .text	00000148 usb_bk_cbw
+06000e5c g     F .text	00000034 htonl
+060037fc g     F .text	00000104 NFC_Init
+06001d10 g     F .text	000000e8 ONFI_ChangeReadColumn
+060051c4 g     F .text	0000006c usb_otg_init
+060053dc g     F .text	000000c8 switchCryptoMode
+0d007000 g       *ABS*	00000000 RAM_END
+0d000000 g       .bss	00000000 bss_start
+0d000950 g     O .bss	00000004 testSel
+06000c44 g     F .text	00000050 eflash_init
+06002d24 g     F .text	00000130 ONFI_EraseBlockMultiPlane
+060041d0 g     F .text	00000008 NFC_Loop
+00007000 g       *ABS*	00000000 RAM_LENGTH
+0600572c g     F .text	000000bc usb_cep_get_status
+060033bc g     F .text	0000014c ONFI_receive16
+060052f4 g     F .text	000000e8 usb_dev_ep4_tx
+06001124 g     F .text	00000028 memset
+06000b10 g     F .text	00000134 main
+06005e94 g     F .text	000000a8 usb_cep_get_config
+06000ff4 g     F .text	00000018 read_uint16
+06000000 g       .text	00000000 text_start
+060073e8 g     O .text	00000020 usb_data_desc_string1
+0d000014 g     O .bss	00000004 NFC_FTL
+06000cf0 g     F .text	00000030 memcpy8_r
+0d000954 g     O .bss	00000004 pRead10
+06003ba8 g     F .text	00000380 ONFI_init
+0d000018 g     O .bss	00000020 NandFlashInfoString
+06007488 g     O .text	00000004 usb_data_udisk_mode_sense10
+060041f4 g     F .text	0000009c NFC_FTL_Verify
+06003260 g     F .text	0000015c ONFI_receive8
+00000000 g       .bss	00000000 data_start
+06006120 g     F .text	00000008 usb_cep_synch_frame
+06004290 g     F .text	000000a0 setup_NFC_LISTFTL
+0d000038 g     O .bss	00000004 nfcCmd
+06000714 g       .text	00000000 .urem
+0600071c g       .text	00000000 .rem
+06006be0 g     F .text	0000006c usb_bk_out
+06006424 g     F .text	0000021c usb_bk_in_data
+06006664 g     F .text	0000014c usb_bk_in
+0600299c g     F .text	000000c8 ONFI_ProgramPage_end
+0600614c g     F .text	0000002c usb_cep_mass_storage_reset
+06004510 g     F .text	00000180 NFC_Copy_Back_Ftl
+06007320 g     O .text	00000020 NandFlashInfoString_default
+06002388 g     F .text	000000d0 ONFI_ReadCacheSequential
+06007408 g     O .text	00000020 usb_data_desc_string2
+06004ee4 g     F .text	00000090 nandFlashRead
+06006640 g     F .text	00000024 usb_bk_csw
+06005844 g     F .text	0000003c usb_cep_set_feature
+06000ef4 g     F .text	0000006c memcpy32htonl_r
+060021d8 g     F .text	000001b0 ONFI_ReadPage
+0600475c g     F .text	00000070 addrMap
+06000f90 g     F .text	00000064 write_uint64
+0600100c g     F .text	00000014 write_uint16
+06004424 g     F .text	000000ec NFC_ReadFtl_T
+0600157c g     F .text	000000f0 ONFI_ReadUniqueID
+06000000 g       .text	00000000 start
+060046dc g     F .text	0000004c Nfc_getFlashInfo_8
+06006cb4 g     F .text	00000068 usb_bk_reset_out
+0600183c g     F .text	000000ec ONFI_GetFeatures
+06007458 g     O .text	00000024 usb_data_udisk_inquiry
+06001ae0 g     F .text	00000230 ONFI_SelectLunWithStatus
+0d00003c g     O .bss	0000000c nfcTrsState
+06005880 g     F .text	000000e8 usb_cep_set_address
+0600037c g       .text	00000000 .umul
+0d000958 g     O .bss	00000004 pWrite10
+060073a8 g     O .text	00000012 usb_data_desc_device
+06005230 g     F .text	000000c4 usb_dev_ep3_rx
+06003508 g     F .text	00000220 ONFI_dma_read
+06001304 g     F .text	000000e8 ONFI_SynchronousReset
+06007120 g     O .text	00000200 stdBuf
+060041d8 g     F .text	0000001c GPIO_ERROR_FLG
+060054a4 g     F .text	00000098 usb_cep_update
+060009c4 g     F .text	0000014c Isr_Handler
+06005e8c g     F .text	00000008 usb_cep_set_descriptor
+0d00095c g     O .bss	00000004 pUsbDevReg
+
+
