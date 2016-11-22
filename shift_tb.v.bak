@@ -1,0 +1,33 @@
+`timescale 1ns/1ps
+
+module shift_tb ;
+
+	reg clk, enable,
+	reg sr_in,
+	wire sr_out,
+	wire [7:0]  sr_data
+	
+	
+	
+initial
+begin
+    	
+	clk=0;
+	enable=0;
+	sr_in=0
+	#100
+	
+	enable=1;
+	sr_in=1;
+	#30
+	sr_in=0;
+	#70 sr_in=~sr_in;
+end
+
+always #10 clk=~clk;
+	
+	
+	
+	
+	
+endmodule
