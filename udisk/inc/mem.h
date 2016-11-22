@@ -23,7 +23,8 @@ void   memcpy32htonl (uint32_t * dst, uint32_t * src, INT32S len);
 void   memcpy32htonl_r (uint32_t * dst, uint32_t * src, INT32S len);
 INT32S memcmp32(uint32_t *src1, uint32_t *src2, INT32S len);
 INT32S memcmp8(BYTE *src1, BYTE *src2, INT32S len);
-BYTE*  memmem(const BYTE* haystack, uint32_t haystack_len, const BYTE* needle, uint32_t needle_len);
+BYTE*  memmem(const BYTE* haystack, uint32_t haystack_len, const BYTE* needle, 
+              uint32_t needle_len);
 
 uint32_t htonl(uint32_t x);
 

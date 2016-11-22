@@ -49,7 +49,8 @@ typedef volatile signed int     VINT32S;
 #define HIBYTE(w)       ((BYTE)(((uint16_t)(w) >> 8) & 0xFF))
 #define MAX(a,b)        (((a) > (b)) ? (a) : (b))
 #define MIN(a,b)        (((a) < (b)) ? (a) : (b))
-#define ILTOBENDIAN(X)  ((((X)>>24)&0xff) | (((X)>>8)&0xff00) | (((X)<<8)&0xff0000) | (((X)<<24)&0xff000000))
+#define ILTOBENDIAN(X)  ((((X)>>24)&0xff) | (((X)>>8)&0xff00) | (((X)<<8)&0xff0000) | \
+                         (((X)<<24)&0xff000000))
 #define WLTOBENDIAN(X)  ((((X)>>8)&0xff) | (((X)<<8)&0xff00))
 
 

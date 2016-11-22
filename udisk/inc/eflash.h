@@ -74,53 +74,53 @@
 
 /* AHBEF32KX32C 时间参数寄存器 2 描述 */
 // [26-16] 设置Tnvh
-#define EFLASH_TIMER2_NVH           ((Tnvh*Fsysclk-1)<<16)
+#define EFLASH_TIMER2_NVH       ((Tnvh*Fsysclk-1)<<16)
 
 // [15-0] 设置Tnvhl
-#define EFLASH_TIMER2_NVHL          ((Tnvhl*Fsysclk)-1)
+#define EFLASH_TIMER2_NVHL      ((Tnvhl*Fsysclk)-1)
 
 /* AHBEF32KX32C 时间参数寄存器 3 描述 */
 // [27-16] 设置Tpgs
-#define EFLASH_TIMER3_PGS           (((Tpgs*Fsysclk)-1)<<16)
+#define EFLASH_TIMER3_PGS       (((Tpgs*Fsysclk)-1)<<16)
 
 // [10-0] 设置Tnvs
-#define EFLASH_TIMER3_NVS           ((Tnvs*Fsysclk)-1)
+#define EFLASH_TIMER3_NVS       ((Tnvs*Fsysclk)-1)
 
 
 /* AHBEF32KX32C 时间参数寄存器 4 描述 */
 // [28-20] 设置Trcv
-#define EFLASH_TIMER4_RCV           (((Trcv*Fsysclk)-1)<<20)
+#define EFLASH_TIMER4_RCV       (((Trcv*Fsysclk)-1)<<20)
 
 // [19-16] 设置Tpgh
-#define EFLASH_TIMER4_PGH           (0)
+#define EFLASH_TIMER4_PGH       (0)
 
 // [12-0] 设置Tprog
-#define EFLASH_TIMER4_PROG          ((Tprog*Fsysclk)-1)
+#define EFLASH_TIMER4_PROG      ((Tprog*Fsysclk)-1)
 
 
 
 /* AHBEF32KX32C 控制寄存器 1 描述 */
 
 // [31] 测试模式使能，高电平有效
-#define EFLASH_CTRL1_TMEN           (1<<31) 
+#define EFLASH_CTRL1_TMEN       (1<<31) 
 
-#define AHBEFM_CTRL1_ERPR_ENA       (1<<29) //Erase and program enable, active high
+#define AHBEFM_CTRL1_ERPR_ENA   (1<<29) //Erase and program enable, active high
 
 
 // [28-24] 测试模式下的时间参数(有效值 >= 1)
-#define EFLASH_CTRL1_TMV            (1<<24) 
+#define EFLASH_CTRL1_TMV        (1<<24) 
 
 // [18] 擦除完成后的中断使能，高电平有效
-#define EFLASH_CTRL1_INTEN          (1<<18) 
+#define EFLASH_CTRL1_INTEN      (1<<18) 
 
 // [17] 调试输出使能，高电平有效
-#define EFLASH_CTRL1_DBGOE          (1<<17) 
+#define EFLASH_CTRL1_DBGOE      (1<<17) 
 
 // [16] 自动扇区擦除使能，高电平有效
-#define EFLASH_CTRL1_SERAUTO        (1<<16) 
+#define EFLASH_CTRL1_SERAUTO    (1<<16) 
 
 // 重置
-#define EFLASH_CTRL1_RESET          0
+#define EFLASH_CTRL1_RESET      0
 
 
 /* AHBEF32KX32C 控制寄存器 2 描述 */
@@ -129,13 +129,13 @@
 #define EFLASH_CTRL2_TMENP      
 
 // [4] 块擦除完成后自动置“1”，同时向 CPU 发出中断申请信号。写“0”将清除中断。
-#define EFLASH_CTRL2_BERINT         (1<<4)
+#define EFLASH_CTRL2_BERINT     (1<<4)
 
 // [3] 扇区擦除完成后自动置“1”，同时向 CPU 发出中断申请信号。写“0”将清除中断。
-#define EFLASH_CTRL2_SERINT         (1<<3)
+#define EFLASH_CTRL2_SERINT     (1<<3)
 
 // [2] 擦除动作完成后置“1“，ER_EN 置“01” 或 “10”后自动清零。 
-#define EFLASH_CTRL2_EROVR          (1<<2)
+#define EFLASH_CTRL2_EROVR      (1<<2)
 
 // [1-0] 01：扇区擦除 , 10：块擦除。 其他值不动作。擦除操作完成后自动清零。
 #define EFLASH_CTRL2_EREN_SECTOR    1

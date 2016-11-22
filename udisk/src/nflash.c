@@ -31,7 +31,7 @@ void nandFlashWrite(uint32_t sectorAddr,uint32_t sectorNum)
     sectors = MIN(nfcTrsState.sectorTransLen,SECTER_SIZE_PER_IRQ);
 
     nfcTrsState.sectorTransLen -= sectors;
-    nfcTrsState.transferLastFlag = (nfcTrsState.sectorTransLen>0 )?LAST_TRANS_FAIL:LAST_TRANS_TRUE;	
+    nfcTrsState.transferLastFlag = (nfcTrsState.sectorTransLen>0 )?LAST_TRANS_FAIL:LAST_TRANS_TRUE;
     nfcTrsState.Ping_Pong = 0x00;
     nfcTrsState.transferFirstFlag = FIRST_TRANS_TRUE;
     Disk_Program(nfcTrsState.sectorAdr,sectors);	

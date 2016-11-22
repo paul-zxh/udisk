@@ -197,7 +197,8 @@ typedef struct usb_dev_ep_reg
 #define USB_DEV_EP_IRQ_ERR_SENT                 0x800
 
 #define USB_DEV_EP_IRQ_OUT_DEFAULT              (USB_DEV_EP_IRQ_ERR_SENT)
-#define USB_DEV_EP_IRQ_IN_DEFAULT               (USB_DEV_EP_IRQ_DATA_IN_TOKEN|USB_DEV_EP_IRQ_USB_STALL_SENT)
+#define USB_DEV_EP_IRQ_IN_DEFAULT               (USB_DEV_EP_IRQ_DATA_IN_TOKEN | \
+                                                 USB_DEV_EP_IRQ_USB_STALL_SENT)
 
 #define USB_DEV_EP_AVAIL_CNT                    0xfff
 

@@ -102,7 +102,8 @@ void usb_otg_init(void)
     
     GPIO_pullUp_REG = 0x0000dfff;
     pUsbOtgReg->irqEnb = 0;
-    pUsbOtgReg->irqStat = USB_OTG_IRQ_STS_SUSPENDEN + USB_OTG_IRQ_STS_BBUSREQ;
+    pUsbOtgReg->irqStat = USB_OTG_IRQ_STS_SUSPENDEN + 
+                          USB_OTG_IRQ_STS_BBUSREQ;
 }
 
 void usb_init()
@@ -500,10 +501,13 @@ void usb_cep_sent(void)
     pUsbDevReg->cep.inTransfrCnt = size;
 
     if (cep.sent_state != 1) {
-        while ((pUsbDevReg->cep.irqStat & (USB_DEV_CEP_IRQ_DATA_PACKET_TRANS | USB_DEV_CEP_IRQ_STS_COMP)) != (USB_DEV_CEP_IRQ_DATA_PACKET_TRANS | USB_DEV_CEP_IRQ_STS_COMP));
+        while ((pUsbDevReg->cep.irqStat & 
+                (USB_DEV_CEP_IRQ_DATA_PACKET_TRANS | USB_DEV_CEP_IRQ_STS_COMP)) 
+                != (USB_DEV_CEP_IRQ_DATA_PACKET_TRANS | USB_DEV_CEP_IRQ_STS_COMP));
     }
     else {
-        while ((pUsbDevReg->cep.irqStat & USB_DEV_CEP_IRQ_DATA_PACKET_TRANS) != USB_DEV_CEP_IRQ_DATA_PACKET_TRANS);
+        while ((pUsbDevReg->cep.irqStat & USB_DEV_CEP_IRQ_DATA_PACKET_TRANS) 
+                != USB_DEV_CEP_IRQ_DATA_PACKET_TRANS);
     }
 
     if (cep.desc_size <= USB_DEV_CEP_MAX_PACKET_SIZE) {
@@ -958,7 +962,8 @@ const uint8_t usb_data_udisk_request_sense[20]=
     0x00, 0x00
 };
 
-//TODO:这里需要根据实际情况做调整,即块数乘上每块大小就是U盘容量,块大小一般是512字节，这里方便测试改为1024字节
+//TODO:这里需要根据实际情况做调整,即块数乘上每块大小就是U盘容量,块大小一般是512字节，
+//这里方便测试改为1024字节
 //注意:实际运用中这里应该为512字节
 const uint8_t usb_data_udisk_read_capacity[8]=
 {

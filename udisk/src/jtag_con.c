@@ -58,7 +58,7 @@ int ffclose(int filename)
         m_sts = JTAG_STS_REG;
     }
     while (!(m_sts & 0x80000000));  
-    JTAG_STS_REG = 0x81000000 |(0x03<<8)|(filename << 16);                    //2'b11: inform jtag to close the file
+    JTAG_STS_REG = 0x81000000 |(0x03<<8)|(filename << 16); //2'b11: inform jtag to close the file
     
     // send packet command/type
 
